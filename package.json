@@ -1,13 +1,17 @@
 {
   "name": "cleaner",
   "version": "1.0.0",
+  "author": "TeoST",
+  "main": "scripts/main.js",
   "description": "Limpiador de Windows",
-  "main": "clean.js",
+  "keywords": [],
+  "license": "MIT",
   "scripts": {
+    "start": "node clean.js",
+    "startElectron": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "TeoST",
-  "license": "MIT",
   "type": "commonjs"
 }

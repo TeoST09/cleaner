@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleaner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo"><span class="logo-icon">✦</span><span>Cleaner</span></div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar a modo claro">
+          <span id="theme-icon">☀</span>
+          <span id="theme-text">Modo claro</span>
+        </button>
+        <span class="status"><i></i>Sistema listo</span>
+      </div>
+    </header>
+
+    <p id="app-message" class="app-message" role="status" aria-live="polite"></p>
+
+    <section class="welcome">
+      <p class="eyebrow">LIMPIADOR DEL SISTEMA</p>
+      <h1>Haz que tu equipo<br>respire mejor.</h1>
+      <p class="description">Analiza los archivos temporales de Windows y libera espacio de forma segura.</p>
+      <button class="button button-primary" data-action="analyze-all">Analizar ahora <span>→</span></button>
+    </section>
+
+    <section class="summary">
+      <div class="summary-icon">⌁</div>
+      <div><p>Elementos encontrados</p><strong id="space-to-clean">—</strong></div>
+      <span class="summary-text">Analiza el sistema para ver los resultados.</span>
+    </section>
+
+    <section class="cleaning-options">
+      <div class="section-title">
+        <p class="eyebrow">ZONAS DE LIMPIEZA</p>
+        <h2>¿Qué quieres revisar?</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">◫</div>
+          <h3>Archivos temporales</h3>
+          <p>Restos de aplicaciones, caché y archivos temporales.</p>
+          <div class="card-bottom"><span id="temp-files">Sin analizar</span><button class="button button-light" data-action="analyze-temp">Analizar</button></div>
+        </article>
+        <article class="card">
+          <div class="card-icon card-icon-purple">▦</div>
+          <h3>Prefetch</h3>
+          <p>Archivos de inicio guardados por Windows.</p>
+          <div class="card-bottom"><span id="prefetch-files">Sin analizar</span><button class="button button-light" data-action="analyze-prefetch">Analizar</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="clean-all">
+      <div><h2>Limpieza completa</h2><p>Elimina los archivos encontrados en las zonas seleccionadas.</p></div>
+      <button class="button button-primary" data-action="clean-all">Limpiar todo</button>
+    </section>
+
+    <footer><span>Cleaner · v1.0</span><span>Los archivos en uso se omitirán.</span></footer>
+  </main>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
